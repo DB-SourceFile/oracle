@@ -1,0 +1,17 @@
+1)修改表空间大小(32000可改为想要的数值)
+
+alter database datafile '要修改的数据文件地址' resize 32000m;
+
+2)新增数据文件
+
+ALTER TABLESPACE 表空间名
+
+ADD DATAFILE '数据文件路径'
+
+SIZE 500M
+
+AUTOEXTEND
+
+ON NEXT 1M
+
+MAXSIZE UNLIMITED;
